@@ -1,0 +1,5 @@
+Configure the file configuration.go in the folder configuration and edit the parameters
+go mod init crmlang
+go mod tidy
+go get github.com/gorilla/sessions
+go run ./
