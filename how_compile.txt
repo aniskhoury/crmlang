@@ -2,4 +2,5 @@ Configure the file configuration.go in the folder configuration and edit the par
 go mod init crmlang
 go mod tidy
 go get github.com/gorilla/sessions
+go build
 go run ./

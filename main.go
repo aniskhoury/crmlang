@@ -11,19 +11,13 @@ import (
 		"github.com/gorilla/sessions"*/
 
 	"crmlang/configuration"
-	"crmlang/controllers/index"
+	handlefunc "crmlang/handleFunc"
 	"net/http"
-)
-
-var (
-	contador int = 0
 )
 
 func main() {
 
-	fileServer := http.FileServer(http.Dir("resources"))
-	http.Handle("/resources/", http.StripPrefix("/resources", fileServer))
-	http.HandleFunc("/", index.IndexFunc)
+	handlefunc.CallAllHandleFunctions()
 	http.ListenAndServe(":"+configuration.PortHTTPServer, nil)
 
 }
